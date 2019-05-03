@@ -1,4 +1,5 @@
 #!/bin/bash
+HOSTNAME=YOUR.URL.HERE
 
 # Root Priv Check
 if [ "$(whoami)" != "root" ]; then
@@ -13,4 +14,4 @@ killall c2_community-linux-64
 #Start Hak5 C2 Community Edition
 
 cd /c2/
-./c2_community-linux-64  -https -hostname c2.cl2apple.com
+./c2_community-linux-64  -https -hostname $HOSTNAME
