@@ -1,0 +1,11 @@
+[Unit]
+Description=Hak5 C2 Command and Control service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+ExecStart=/bin/sh /usr/bin/c2_start.sh
+
+[Install]
+WantedBy=multi-user.target
